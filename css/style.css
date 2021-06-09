@@ -74,7 +74,7 @@ p {
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {
 	position: fixed;
-  
+
 	left: 0px;
 	top: 0px;
 	width: 100%;
@@ -259,7 +259,7 @@ section.intro {
   background:url(../img/clouds.png) repeat-x top center;
   background-size:contain;
   background-repeat:repeat;
-  /*animation:slideleft 20000s infinite linear;-webkit-animation:slideleft 20000s infinite linear;width:100%;*/
+  /* animation:slideleft 20000s infinite linear;-webkit-animation:slideleft 20000s infinite linear;width:100%; */
   background-color:#41b0bf;
   padding-bottom:70px;
   position:relative;
@@ -660,6 +660,10 @@ hr {
     text-align: center;
     padding-right: 50px;
   }
+  .heli{
+    width:15%;
+    padding-top: 5%;
+  }
 }
 @media only screen and (min-width:40em) and (max-width:60em) {
   ul.menu li {
@@ -692,9 +696,13 @@ hr {
     text-align: center;
     padding-right: 50px;
   }
+  .heli{
+    width:15%;
+    padding-top: 5%;
+  }
 }
 
-/* Mobile View */
+/* Actual Mobile View ---------------------------------------------------------------------- */
 @media only screen and  (max-width:40em) {
   ul.menu {
     float:left;
@@ -720,6 +728,11 @@ hr {
     height: 240px;
     width: 480px;
   }
+  .heli{
+    width:25%;
+    padding-top: 5%;
+
+  }
 
 .prog_font{
   font-size: 0.6rem;
@@ -739,6 +752,9 @@ hr {
     height: 150px;
     width: 325px;
   }
+  .heli{
+    width:10%;
+  }
 }
 }
 @media only screen and (max-width:400px) {
@@ -755,6 +771,9 @@ hr {
     height: 150px;
     width: 325px;
   }
+  .heli{
+    width:10%;
+  }
 }
 @media only screen and (max-width:360px) and (min-width:341px) {
   section.intro h1 {
@@ -770,6 +789,9 @@ hr {
     height: 135px;
     width: 310px;
   }
+  .heli{
+    width:10%;
+  }
 }
 @media only screen and (max-width:339px) {
   section.intro h1 {
@@ -784,6 +806,9 @@ hr {
   .work1{
     height: 114px;
     width: 224px;
+  }
+  .heli{
+    width:10%;
   }
 }
 
