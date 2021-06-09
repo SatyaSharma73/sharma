@@ -729,7 +729,7 @@ hr {
     width: 480px;
   }
   .heli{
-    width:25%;
+    width:35%;
     padding-top: 5%;
 
   }
@@ -753,7 +753,9 @@ hr {
     width: 325px;
   }
   .heli{
-    width:10%;
+    width:25%;
+    padding-top: 5%;
+
   }
 }
 }
@@ -772,7 +774,9 @@ hr {
     width: 325px;
   }
   .heli{
-    width:10%;
+    width:25%;
+    padding-top: 5%;
+
   }
 }
 @media only screen and (max-width:360px) and (min-width:341px) {
@@ -790,7 +794,9 @@ hr {
     width: 310px;
   }
   .heli{
-    width:10%;
+    width:25%;
+    padding-top: 5%;
+
   }
 }
 @media only screen and (max-width:339px) {
@@ -808,7 +814,9 @@ hr {
     width: 224px;
   }
   .heli{
-    width:10%;
+    width:25%;
+    padding-top: 5%;
+
   }
 }
 
@@ -823,7 +831,11 @@ hr {
   .lastgif{
     width: 100px;
   }
+  .heli{
+    width:25%;
+    padding-top: 5%;
 
+  }
   section.intro,.wrapper,section.about,section.projects,section.sayhello {
     border:none;
   }
