@@ -1252,7 +1252,7 @@ animation-timing-function: ease-out;
   left:0;
   top:0;
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
+
   letter-spacing: 5px;
 }
 .cd-words-wrapper b.is-visible {
@@ -1326,7 +1326,7 @@ span.title {
   font-weight:400;
   color:#fff;
   font-size:1.4em;
-  letter-spacing: 15px;
+  
 }
 .fa-facebook-official {
   font-size:3em !important;
