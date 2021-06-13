@@ -1252,6 +1252,7 @@ animation-timing-function: ease-out;
   left:0;
   top:0;
   font-family: 'Lato', sans-serif;
+  font-size: 1rem;
 
   letter-spacing: 5px;
 }
