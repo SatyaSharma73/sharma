@@ -1325,8 +1325,8 @@ span.title {
   text-transform:none;
   font-weight:400;
   color:#fff;
-  font-size:1.4em;
-  
+  font-size:1.2em;
+  letter-spacing: 5px;
 }
 .fa-facebook-official {
   font-size:3em !important;
