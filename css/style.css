@@ -281,12 +281,24 @@ section.intro span.design {
 section.intro span {
   font-family:'ProximaNova';
 }
-a.btn {
-  border:1px solid #fff;
+@keyframes moveInup {
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(-0);
+  }
+}
+a.btn:link,
+a.btn:visited {
+  border:1px solid #009ca8;
   text-transform:uppercase;
-  color:#fff;
+  color:#009ca8;
   padding:15px 25px;
-  border-radius:30px;
+  border-radius: 100px;
   font-size:14px;
   letter-spacing:1px;
   margin-top:14px;
@@ -295,10 +307,51 @@ a.btn {
   -webkit-transition:all .2s ease;
   -moz-transition:all .2s ease;
   transition:all .2s ease;
+  text-decoration: none;
+
 }
 a.btn:hover {
-  background-color:#fff;
-  color:#009ca8
+  background-color:#009ca8;
+  color:#fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+a.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+a.btn-white{
+  background-color: #fff;
+  color: #777;
+
+}
+a.btn::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+
+}
+a.btn-white::after{
+  background-color: #fff;
+
+}
+a.btn:hover::after{
+  transform: scaleX(1.5) scaleY(1.5);
+  opacity: 0;
+}
+a.btn-animated{
+  animation-name:moveInup;
+   animation-duration: 1s;
+   animation-timing-function: ease-out;
+   animation-delay: .75s;
+   animation-fill-mode: backwards;
 }
 a.btn.project {
   background:transparent;
@@ -308,6 +361,74 @@ a.btn.project {
 a.btn.project:hover {
   background-color:#fff;
   color:#fe5f55;
+}
+.heading-primary-main{
+display: block;
+font-size:   60px;
+font-weight: 100px;
+animation-name: moveInleft;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+
+}
+.heading-primary-sub{
+display: block;
+font-size:   20px;
+font-weight: 700px;
+animation-name: moveInright;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+}
+
+@keyframes moveInleft {
+0%{
+  opacity: 0;
+  transform: translateX(-100px);
+}
+80%{
+  transform: translateX(10px);
+}
+100%{
+  opacity: 1;
+  transform: translate(0);
+}
+}
+
+@keyframes moveInright {
+0%{
+  opacity: 0;
+  transform: translateX(100px);
+}
+80%{
+  transform: translateX(-1px);
+}
+100%{
+  opacity: 1;
+  transform: translate(-0);
+}
+}
+.heli-animation{
+  display: block;
+  animation-name: helimoveInright;
+  animation-duration: 3s;
+  animation-timing-function:steps(100,end);
+  animation-fill-mode:forwards;
+}
+@keyframes helimoveInright {
+  0%   { opacity: 0 ;
+        transform: translateX(1000px) scale(0) rotate(0deg);
+      }
+
+   50%
+   {
+     opacity: .50;
+     transform: rotate(340deg) scale(0.5) translate(-300px,0px)
+   }
+   100%
+   {
+     transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-800px,100px);
+   }
+
 }
 section.about {
   padding:0px;
@@ -700,10 +821,13 @@ hr {
     width:15%;
     padding-top: 5%;
   }
+
+
 }
 
 /* Actual Mobile View ---------------------------------------------------------------------- */
 @media only screen and  (max-width:40em) {
+
   ul.menu {
     float:left;
   }
@@ -729,11 +853,37 @@ hr {
     width: 480px;
   }
   .heli{
-    width:35%;
+    width:50%;
     padding-top: 5%;
+  }
+  .heli-animation{
+    display: block;
+    animation-name: helimoveInright;
+    animation-duration: 3s;
+    animation-timing-function:steps(100,end);
+    animation-fill-mode:forwards;
+  }
+  @keyframes helimoveInright {
+    0%   { opacity: 0 ;
+          transform: translateX(1000px) scale(0) rotate(0deg);
+        }
+
+     50%
+     {
+       opacity: 0;
+       transform: rotate(330deg) scale(0.5) translate(-300px,0px)
+     }
+     100%
+     {
+       transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-930px,150px);
+     }
 
   }
-
+  .head{
+    background: url("../img/clouds.png")  top center;
+      background-size: contain;
+      background-repeat:space;
+  }
 .prog_font{
   font-size: 0.6rem;
 }
@@ -753,10 +903,37 @@ hr {
     width: 325px;
   }
   .heli{
-    width:25%;
-    padding-top: 5%;
+      width:30%;
+      padding-top: 5%;
+    }
+    .heli-animation{
+      display: block;
+      animation-name: helimoveInright;
+      animation-duration: 3s;
+      animation-timing-function:steps(100,end);
+      animation-fill-mode:forwards;
+    }
+    @keyframes helimoveInright {
+      0%   { opacity: 0 ;
+            transform: translateX(1000px) scale(0) rotate(0deg);
+          }
 
-  }
+       50%
+       {
+         opacity: 0;
+         transform: rotate(330deg) scale(0.5) translate(-300px,0px)
+       }
+       100%
+       {
+         transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-900px,150px);
+       }
+
+    }
+    .head{
+      background: url("../img/clouds.png")  top center;
+        background-size: contain;
+        background-repeat:space;
+    }
 }
 }
 @media only screen and (max-width:400px) {
@@ -778,6 +955,38 @@ hr {
     padding-top: 5%;
 
   }
+  .heli{
+    width:30%;
+    padding-top: 5%;
+  }
+  .heli-animation{
+    display: block;
+    animation-name: helimoveInright;
+    animation-duration: 3s;
+    animation-timing-function:steps(100,end);
+    animation-fill-mode:forwards;
+  }
+  @keyframes helimoveInright {
+    0%   { opacity: 0 ;
+          transform: translateX(1000px) scale(0) rotate(0deg);
+        }
+
+     50%
+     {
+       opacity: 0;
+       transform: rotate(330deg) scale(0.5) translate(-300px,0px)
+     }
+     100%
+     {
+       transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-900px,150px);
+     }
+
+  }
+  .head{
+    background: url("../img/clouds.png")  top center;
+      background-size: contain;
+      background-repeat:space;
+  }
 }
 @media only screen and (max-width:360px) and (min-width:341px) {
   section.intro h1 {
@@ -794,9 +1003,36 @@ hr {
     width: 310px;
   }
   .heli{
-    width:25%;
+    width:30%;
     padding-top: 5%;
+  }
+  .heli-animation{
+    display: block;
+    animation-name: helimoveInright;
+    animation-duration: 3s;
+    animation-timing-function:steps(100,end);
+    animation-fill-mode:forwards;
+  }
+  @keyframes helimoveInright {
+    0%   { opacity: 0 ;
+          transform: translateX(1000px) scale(0) rotate(0deg);
+        }
 
+     50%
+     {
+       opacity: 0;
+       transform: rotate(330deg) scale(0.5) translate(-300px,0px)
+     }
+     100%
+     {
+       transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-900px,150px);
+     }
+
+  }
+  .head{
+    background: url("../img/clouds.png")  top center;
+      background-size: contain;
+      background-repeat:space;
   }
 }
 @media only screen and (max-width:339px) {
@@ -814,13 +1050,42 @@ hr {
     width: 224px;
   }
   .heli{
-    width:25%;
+    width:30%;
     padding-top: 5%;
+  }
+  .heli-animation{
+    display: block;
+    animation-name: helimoveInright;
+    animation-duration: 3s;
+    animation-timing-function:steps(100,end);
+    animation-fill-mode:forwards;
+  }
+  @keyframes helimoveInright {
+    0%   { opacity: 0 ;
+          transform: translateX(1000px) scale(0) rotate(0deg);
+        }
+
+     50%
+     {
+       opacity: 0;
+       transform: rotate(330deg) scale(0.5) translate(-300px,0px)
+     }
+     100%
+     {
+       transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-900px,150px);
+     }
 
   }
+  .head{
+    background: url("../img/clouds.png")  top center;
+      background-size: contain;
+      background-repeat:space;
+  }
 }
+@media only screen and (max-width:64em) {
 
-
+}
+/* Smallest Screen after mobile--------------------------------------------------------------------------------------------- */
 @media only screen and (max-width:64em) {
   .opl,.cssda {
     display:none;
@@ -832,17 +1097,87 @@ hr {
     width: 100px;
   }
   .heli{
-    width:25%;
+    width: 40%;
     padding-top: 5%;
 
+  }
+  .heli-animation{
+    display: block;
+    animation-name: helimoveInright;
+    animation-duration: 3s;
+    animation-timing-function:steps(100,end);
+    animation-fill-mode:forwards;
+  }
+  @keyframes helimoveInright {
+    0%   { opacity: 0 ;
+          transform: translateX(1000px) scale(0) rotate(0deg);
+        }
+
+     50%
+     {
+       opacity: 0;
+       transform: rotate(330deg) scale(0.5) translate(-300px,0px)
+     }
+     100%
+     {
+       transform: scale(0.8) rotate(2deg) translate(1140px,-137px) translate(-900px,150px);
+     }
+
+  }
+  .head{
+    background: url("../img/clouds.png")  top center;
+      background-size: contain;
+      background-repeat:no-repeat;
   }
   section.intro,.wrapper,section.about,section.projects,section.sayhello {
     border:none;
   }
-  .iama {
+
+  .heading-primary-main{
+  display: block;
+  font-size:   60px;
+  font-weight: 100px;
+  animation-name: moveInleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+}
+.heading-primary-sub{
+display: block;
+font-size:   20px;
+font-weight: 700px;
+animation-name: moveInright;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+}
+
+@keyframes moveInleft {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  .title {
+  80%{
+    transform: translateX(10px);
   }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInright {
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80%{
+    transform: translateX(-1px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(-0);
+  }
+}
   #scene {
     display:none;
   }
