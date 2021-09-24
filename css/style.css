@@ -86,8 +86,8 @@ p {
   background-color: black;
   /* https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif */
   /* https://media.giphy.com/media/or0s8qzLMNyJW/giphy.gif */
-
-	background: url(https://media.giphy.com/media/12775LeUHMZjNu/giphy.gif) center no-repeat black;
+/* https://media.giphy.com/media/12775LeUHMZjNu/giphy.gif */
+	background: url(https://media.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47528v9tez64o1912bp1vrbwi00ge35iohpn2hso3z&rid=giphy.gif&ct=g) center no-repeat black;
 }
 .loadingText{
   font-size: 1.5rem;
@@ -815,6 +815,22 @@ ani {
 
   .ani model-viewer {
       width:10px;
+  }
+
+  .se-pre-con {
+  	position: fixed;
+
+  	left: 0px;
+  	top: 0px;
+  	background-position: center;
+    width: 50%;
+  	height: 100%;
+  	z-index: 9999;
+    background-color: black;
+    /* https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif */
+    /* https://media.giphy.com/media/or0s8qzLMNyJW/giphy.gif */
+  /* https://media.giphy.com/media/12775LeUHMZjNu/giphy.gif */
+  	background: url(https://media.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47528v9tez64o1912bp1vrbwi00ge35iohpn2hso3z&rid=giphy.gif&ct=g) center no-repeat black;
   }
 }
 @media only screen and (min-width:40em) and (max-width:60em) {

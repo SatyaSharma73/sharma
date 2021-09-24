@@ -15,7 +15,6 @@
   <meta property="og:description"
     content="Hello World, I'm a a Full Stack Web Developer,a Cyber Security Enthusiast, and a Martial Artist also a proud Indian. You are all welcome to Reuse my Project according to your Own need .Feel Free to reach out to me" />
   <title>Satya Sharma</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link href="img/sen_.ico" type="image/x-icon" rel="shortcut icon" />
   <link rel="stylesheet" href="css/foundation.css" />
@@ -61,9 +60,9 @@
 
   <!-- Remove The below comment to add Loading Screen -->.
 
-  <!-- <div class="se-pre-con">
-  <h1 class="loadingText">Loading Please Wait...</h1>
-</div> -->
+  <div class="se-pre-con">
+    <h1 class="loadingText"></h1>
+  </div>
 
   <header class="nav-down reachedTop">
     <div class="wrapper" id="wrapper">
@@ -386,6 +385,7 @@
         <p class="footTitle alignCenter">
           Satya Sharma
         </p>
+        <span id="demo"></span>
         <p class="madewithlove">
           Made with 💖 in <strong>India</strong>
 
@@ -414,10 +414,6 @@
   <script src="js/stepsForm.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/jquery.cbpFWSlider.min.js"></script>
-
-
-  <script src="js/music.js" charset="utf-8"></script>
-
   <script>
     $(function() {
       $('#cbp-fwslider').cbpFWSlider();
@@ -458,18 +454,21 @@
     $(document).foundation();
   </script>
   <script src="js/textRotate.js"></script>
+
   <script type="text/javascript">
-    var sc_project = 11086857;
-    var sc_invisible = 1;
-    var sc_security = "58e9ef84";
-    var scJsHost = (("https:" == document.location.protocol) ?
-      "https://secure." : "http://www.");
-    document.write("<sc" + "ript type='text/javascript' src='" +
-      scJsHost +
-      "statcounter.com/counter/counter.js'></" + "script>");
+    let myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
   </script>
-
-
+  <script type="text/javascript">
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+      alert('Right Click is Disabled , Please reach Out to the Developer');
+    }, false);
+  </script>
 
 </body>
 
