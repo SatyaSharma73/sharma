@@ -464,10 +464,22 @@
     }
   </script>
   <script type="text/javascript">
+    //Right Key Disabled
+
     document.addEventListener("contextmenu", function(event) {
       event.preventDefault();
       alert('Right Click is Disabled , Please reach Out to the Developer');
     }, false);
+
+
+    // CTRL + U is disabled
+    document.onkeydown = function(e) {
+      if (e.ctrlKey &&
+        (e.keyCode === 85)) {
+        alert('CTRL + U also Disabled , Please reach Out to the Developer');
+        return false;
+      }
+    };
   </script>
 
 </body>
