@@ -61,7 +61,7 @@
   <!-- Remove The below comment to add Loading Screen -->.
 
   <div class="se-pre-con">
-    <h1 class="loadingText"></h1>
+    
   </div>
 
   <header class="nav-down reachedTop">
@@ -416,6 +416,7 @@
   <script src="js/jquery.cbpFWSlider.min.js"></script>
   <script>
     $(function() {
+      
       $('#cbp-fwslider').cbpFWSlider();
       $('#quote-slider').cbpFWSlider();
       setInterval(function() {
@@ -456,6 +457,7 @@
   <script src="js/textRotate.js"></script>
 
   <script type="text/javascript">
+  
     let myVar = setInterval(myTimer, 1000);
 
     function myTimer() {
@@ -465,9 +467,14 @@
   </script>
   <script type="text/javascript">
     //Right Key Disabled
-
+    var audio = new Audio('error.mp3');
+    var audio1 = new Audio('abort.mp3');
+    
+  
+        
     document.addEventListener("contextmenu", function(event) {
       event.preventDefault();
+      audio.play();
       alert('Right Click is Disabled , Please reach Out to the Developer');
     }, false);
 
@@ -476,11 +483,16 @@
     document.onkeydown = function(e) {
       if (e.ctrlKey &&
         (e.keyCode === 85)) {
+          audio1.play();
         alert('CTRL + U also Disabled , Please reach Out to the Developer');
         return false;
       }
     };
+
+ 
+
   </script>
+  
 
 </body>
 
